@@ -124,3 +124,6 @@ Java code migrated to use `TYPE_USE` nullability annotations
 
 `com.intellij.navigation.ChooseByNameContributorEx.processElementsWithName` method parameter type changed from `Processor<NavigationItem>` to ``Processor<? extends NavigationItem>``
 : This may break source-compatibility with inheritors written in Kotlin.
+
+`com.intellij.openapi.progress.util.BlockingProgressIndicator` class renamed to `com.intellij.openapi.progress.BlockingProgressIndicator`
+: BlockingProgressIndicator is pulled to core-api module; its method set has also changed. Please use `com.intellij.openapi.progress.util.ProgressWindow` directly where needed.
